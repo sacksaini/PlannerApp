@@ -1,54 +1,26 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return TimerState();
-  }
-}
-
-class TimerState extends State<MyApp> {
-  var increasetime = 0;
-  void decreasTime() {
-    setState(() {
-      increasetime = 0;
-    });
-  }
-
-//add a test comment
-  void increasTime() {
-    setState(() {
-      increasetime += 2;
-      print(increasetime);
-    });
-  }
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Center(
-              child: Text("Long Press Test",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ))),
-          backgroundColor: Colors.teal,
-        ),
-        body: Center(
-          child: Column(
-            children: [
-              RaisedButton(
-                child: Text("Increment"),
-                onPressed: increasTime,
-                onLongPress: decreasTime,
-              ),
-              Text("$increasetime")
-            ],
-          ),
-        ),
+      title: 'Flutter App',
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter App'),
+      ),
+      body: Center(
+        child: Text('Widget Playground!'),
       ),
     );
   }
