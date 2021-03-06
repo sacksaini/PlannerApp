@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// The Instance of this class is called inside the UserTransactions.dart file. The main motive of this seperate file is to make th code more manageable
+
 class NewTransaction extends StatelessWidget {
   final titleController = TextEditingController();
   final amountController = TextEditingController();

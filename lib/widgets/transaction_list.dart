@@ -3,8 +3,10 @@ import 'package:timer/models/transaction.dart';
 import '../models/transaction.dart';
 import 'package:intl/intl.dart';
 
+// The Instance of this class is called inside the UserTransactions.dart file. The main motive of this seperate file is to make th code more manageable
+
 class TransactionList extends StatelessWidget {
-  List<Transaction> userTransaction;
+  final List<Transaction> userTransaction;
   TransactionList(this.userTransaction);
   @override
   Widget build(BuildContext context) {
