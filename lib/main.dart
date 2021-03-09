@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
         accentColor: Colors.purpleAccent,
-        fontFamily: 'OpenSans',
+        fontFamily: 'Quicksand',
       ),
       home: MyHomePage(),
     );
@@ -70,10 +70,10 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           'Personal Expenses',
-          style: TextStyle(
-              fontFamily: 'Quicksand',
-              fontSize: 17,
-              fontWeight: FontWeight.bold),
+          // style: TextStyle(
+          //   fontFamily: 'Quicksand',
+          //   fontSize: 17,
+          //   fontWeight: FontWeight.bold),
         ),
         actions: <Widget>[
           IconButton(
