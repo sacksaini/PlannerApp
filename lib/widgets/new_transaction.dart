@@ -30,6 +30,7 @@ class _NewTransactionState extends State<NewTransaction> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.all(4),
       elevation: 4,
       child: Container(
         padding: EdgeInsets.all(15),

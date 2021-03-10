@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
         accentColor: Colors.purpleAccent,
-        fontFamily: 'OpenSans',
+        fontFamily: 'Quicksand',
       ),
       home: MyHomePage(),
     );
@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransaction = [
-    Transaction(
+    /*  Transaction(
       id: 't1',
       title: 'New Shoes',
       amount: 69.99,
@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       title: 'Weekly Groceries',
       amount: 20.53,
       date: DateTime.now(),
-    ),
+    ),  */
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _startAddNewTransaction(BuildContext ctx) {
     showModalBottomSheet(
+        backgroundColor: Colors.purpleAccent,
         context: ctx,
         builder: (_) {
           return NewTransaction(_addNewTransaction);
@@ -68,10 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           'Personal Expenses',
-          style: TextStyle(
-              fontFamily: 'Quicksand',
-              fontSize: 17,
-              fontWeight: FontWeight.bold),
+          // style: TextStyle(
+          //   fontFamily: 'Quicksand',
+          //   fontSize: 17,
+          //   fontWeight: FontWeight.bold),
         ),
         actions: <Widget>[
           IconButton(
