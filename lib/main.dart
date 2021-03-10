@@ -56,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _startAddNewTransaction(BuildContext ctx) {
     showModalBottomSheet(
-        elevation: 10,
         backgroundColor: Colors.purpleAccent,
         context: ctx,
         builder: (_) {
