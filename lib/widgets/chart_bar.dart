@@ -9,7 +9,7 @@ class ChartBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("\u{20B9}${spendingamount.toStringAsFixed(0)}"),
+        FittedBox(child: Text("\u{20B9}${spendingamount.toStringAsFixed(0)}")),
         SizedBox(
           height: 4,
         ),
@@ -40,7 +40,8 @@ class ChartBar extends StatelessWidget {
         ),
         SizedBox(
           height: 4,
-        )
+        ),
+        Text("$label")
       ],
     );
   }
