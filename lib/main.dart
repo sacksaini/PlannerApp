@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:timer/widgets/new_transaction.dart';
-import './widgets/transaction_list.dart';
+
 import './widgets/new_transaction.dart';
-import 'models/transaction.dart';
+import './widgets/transaction_list.dart';
+import './models/transaction.dart';
+import './widgets/chart.dart';
 
 void main() => runApp(MyApp());
 
@@ -41,6 +42,16 @@ class _MyHomePageState extends State<MyHomePage> {
       date: DateTime.now(),
     ),  */
   ];
+
+  List<Transaction> get _recentTransactions {
+    return _userTransaction.where((element) {
+      return element.date.isAfter(
+        DateTime.now().subtract(
+          Duration(days: 7),
+        ),
+      );
+    }).toList();
+  }
 
   void _addNewTransaction(String txTitle, double txAmount) {
     final newTx = Transaction(
@@ -86,14 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //  mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              width: double.infinity,
-              child: Card(
-                child: Text("CHART"),
-                color: Theme.of(context).primaryColor,
-                elevation: 5,
-              ),
-            ),
+            Chart(_recentTransactions),
             TransactionList(_userTransaction),
             // In this instance of a class, we call the other two widgets too i.e. NewTransactionand TransactionList.
             //Reason is that , in casewe want to change something particulary in List, then we can use onlt TransactionList and if only add a transaction, then call NewTransaction.
