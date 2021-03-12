@@ -1,0 +1,71 @@
+[33mcommit 8c7cdcd41960fde587890ff195f4d66418bfa7ab[m[33m ([m[1;36mHEAD -> [m[1;32mfeatrue-0.2[m[33m, [m[1;31morigin/featrue-0.2[m[33m)[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Wed Mar 10 20:24:12 2021 +0530
+
+    addscrollbar, Image for no transaction found,style
+
+[33mcommit c73166f14b57f72f8322a6a63ae37e9a745d2fab[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Wed Mar 10 17:36:56 2021 +0530
+
+    added little bitstyling
+
+[33mcommit b208bc7af558c65fe177ef5af6680a0e337ceb0a[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Tue Mar 9 20:26:29 2021 +0530
+
+    used global font for Appbar
+
+[33mcommit 94697d619d219e5c2c6f7d2ede657c3b453e0ce3[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Tue Mar 9 20:23:16 2021 +0530
+
+    AddTransaction Popup styling
+
+[33mcommit 498a32bd4d1ce72ffadc36d27b686f75df0687a9[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Sun Mar 7 22:28:52 2021 +0530
+
+    popup addtransactionfeature,floatingbutton, fonts and styling
+
+[33mcommit 8485a07c26536062276703b576946090f6d0de1b[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Sun Mar 7 00:55:42 2021 +0530
+
+    added a dot for test
+
+[33mcommit b42e2165aa0477f49d4ef02536feda992e34aca6[m[33m ([m[1;31morigin/feature-0.1[m[33m, [m[1;32mfeature-0.1[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Sun Mar 7 00:51:02 2021 +0530
+
+    added comments to use classes
+
+[33mcommit 9ddd7424f6e9492e1fbcafd711ce2e0e75c27ca9[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Sun Mar 7 00:35:45 2021 +0530
+
+    contents Upto scrollView
+
+[33mcommit 44cbf9f3d9176e49c1a2038706ba044338e0f5cd[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Sat Mar 6 00:41:19 2021 +0530
+
+    commit for new Planner App Stating Point
+
+[33mcommit 426e5dc7f63889e02b369cfadae216a21e3edc31[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Sat Mar 6 00:39:08 2021 +0530
+
+    commit for new Planner App Stating Point
+
+[33mcommit bf4f247fb33c92a2f9675b8f6d230d0d825a3acf[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: Sachin Saini <sachinsaini9774@yahoo.in>
+Date:   Fri Mar 5 01:16:18 2021 +0530
+
+    Update main.dart
+
+[33mcommit 14a5100decd68261bca2c5544f7bd9ca58cd5054[m
+Author: Sachin <sachinsaini854@gmail.com>
+Date:   Fri Mar 5 00:59:20 2021 +0530
+
+    1st Commit to Timer App
