@@ -27,6 +27,17 @@ class _NewTransactionState extends State<NewTransaction> {
     Navigator.of(context).pop();
   }
 
+  void _addDatePicker() {
+    showDatePicker(
+      // helpText: "Date of Spending money!",
+      //initialEntryMode: DatePickerEntryMode.input,
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2020),
+      lastDate: DateTime.now(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -52,10 +63,24 @@ class _NewTransactionState extends State<NewTransaction> {
               keyboardType: TextInputType.number,
               onSubmitted: (_) => submitData(),
             ),
+            Row(
+              children: [
+                Text("No Date Chosen!"),
+                FlatButton(
+                  onPressed: () => _addDatePicker(),
+                  textColor: Theme.of(context).primaryColor,
+                  child: Text("Choose Date"),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
             FlatButton(
               onPressed: submitData,
               child: Text('Add Transaction'),
-              textColor: Colors.purple,
+              color: Theme.of(context).primaryColorDark,
+              textColor: Colors.white,
             ),
           ],
         ),
