@@ -17,6 +17,7 @@ class ChartBar extends StatelessWidget {
           height: 40,
           width: 10,
           child: Stack(
+            alignment: AlignmentDirectional.bottomStart,
             children: [
               Container(
                 decoration: BoxDecoration(
@@ -28,6 +29,7 @@ class ChartBar extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
               ),
               FractionallySizedBox(
+                //Shrinks the text to fit similar to other Bars
                 heightFactor: spendingPctofTotal,
                 child: Container(
                   decoration: BoxDecoration(
