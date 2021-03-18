@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:timer/models/transaction.dart';
+import 'package:timer/widgets/transaction_details.dart';
 import '../models/transaction.dart';
 import 'package:intl/intl.dart';
 
@@ -8,7 +9,17 @@ import 'package:intl/intl.dart';
 class TransactionList extends StatelessWidget {
   final List<Transaction> userTransaction;
   final Function deleteTx;
+
   TransactionList(this.userTransaction, this.deleteTx);
+
+  void txDetails(BuildContext ctx) {
+    showModalBottomSheet(
+        context: ctx,
+        builder: (_) {
+          return TransactionDetails();
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return userTransaction.isEmpty
@@ -32,30 +43,33 @@ class TransactionList extends StatelessWidget {
         : SingleChildScrollView(
             child: Column(
               children: userTransaction.map((tx) {
-                return Card(
-                  shadowColor: Colors.purple,
-                  elevation: 4,
-                  margin: EdgeInsets.symmetric(vertical: 7, horizontal: 4),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      radius: 24,
-                      child: FittedBox(
-                        child: Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Text("\u{20B9}${tx.amount}"),
+                return InkWell(
+                  onTap: () => txDetails(context),
+                  child: Card(
+                    shadowColor: Colors.purple,
+                    elevation: 4,
+                    margin: EdgeInsets.symmetric(vertical: 7, horizontal: 4),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 24,
+                        child: FittedBox(
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Text("\u{20B9}${tx.amount}"),
+                          ),
                         ),
                       ),
-                    ),
-                    title: Text(
-                      tx.title,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    subtitle:
-                        Text(DateFormat('h:mm a | d MMM, y').format(tx.date)),
-                    trailing: IconButton(
-                      icon: Icon(Icons.delete),
-                      onPressed: () => deleteTx(tx.id),
-                      color: Theme.of(context).errorColor,
+                      title: Text(
+                        tx.title,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle:
+                          Text(DateFormat('h:mm a | d MMM, y').format(tx.date)),
+                      trailing: IconButton(
+                        icon: Icon(Icons.delete),
+                        onPressed: () => deleteTx(tx.id),
+                        color: Theme.of(context).errorColor,
+                      ),
                     ),
                   ),
                 );
