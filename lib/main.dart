@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import './models/transaction.dart';
 import './widgets/chart.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+  /*SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);*/
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -110,13 +116,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: (MediaQuery.of(context).size.height -
                         appbar.preferredSize.height -
                         MediaQuery.of(context).padding.top) *
-                    0.4,
+                    0.25,
                 child: Chart(_recentTransactions)),
             Container(
                 height: (MediaQuery.of(context).size.height -
                         appbar.preferredSize.height -
                         MediaQuery.of(context).padding.top) *
-                    0.6,
+                    0.75,
                 child: TransactionList(_userTransaction, _deleteTransaction)),
             // In this instance of a class, we call the other two widgets too i.e. NewTransactionand TransactionList.
             //Reason is that , in casewe want to change something particulary in List, then we can use onlt TransactionList and if only add a transaction, then call NewTransaction.
